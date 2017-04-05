@@ -25,19 +25,21 @@ Real time total donation endpoint made by all USERS
 
 # API technical aspects
 On Linux Ubuntu
-- `golang` 
-- `golang gin-gonic` framework for API development
+- `golang`   https://github.com/golang
+- `golang gin-gonic` framework for API development  https://github.com/gin-gonic/gin
 - `Postgress` for database
-- `GORM` for ORM
-- `Goose` for Database Migration Tool
+- `GORM` ORM library for Golang  https://github.com/jinzhu/gorm
+- `Goose` for Database Migration Tool  https://bitbucket.org/liamstask/goose
 - `GIT` for Project management
 
 # Financial API service
 We use Mangopay to manage e-wallet for all entities: POS. ASSO, USERS
 - `Mangopay` https://docs.mangopay.com/
+- `Mangopay for Golang` https://github.com/javiermanzano/mangopay2-go-sdk
+
 
 # API TESTING
-We use POSTMAN
+We use a Postman collection
 
 
 
