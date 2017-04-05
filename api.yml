@@ -6,7 +6,7 @@ swagger: '2.0'
 # This is your document metadata
 info:
   version: "0.0.7"
-  title: "Yo Quiero Ayudar API"
+  title: "Yo Quiero Ayudar Rest API"
 
 # GO TO http://editor.swagger.io/#/ and copy-paste this code in the editor
 # to get a better layout
