@@ -21,8 +21,12 @@ Copy/paste   api.yml in swagger to read/update last API service definition
 - Je Vais Aider collect and redistribute donations in France, Belgium, Swizerland,Morroco, Tunez.
 - More countries will come.
 
+# Project management
+- `GIT` for Project management.
+Any Golang gopher programmer can participate. Watch, Star this page or contact-us,  and we´ll contact you.
+
 # API Status 0.15
-API is still beta version. Any Goopher can collaborate. Contact-us, watch or Star this page.
+API is still beta version. 
 - `https://api.microhuchasolidaria.org/version` for Micro Hucha Solidaria.
 - `https://api.jevaisaider.org/version` for Je Vais Aider.
 
@@ -38,7 +42,6 @@ Build on Linux Ubuntu Xenial (16.04 LTS)
 - `Postgress` for database.
 - `GORM` ORM library for Golang  https://github.com/jinzhu/gorm
 - `Goose` for Database Migration Tool  https://bitbucket.org/liamstask/goose
-- `GIT` for Project management.
 
 # Financial API service
 We use Mangopay to manage e-wallet for all entities: POS. ASSO, USERS
