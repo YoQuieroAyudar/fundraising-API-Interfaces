@@ -12,8 +12,12 @@ All donations are API based. We are building a service to easilly make donations
 
 Copy/paste   api.yml in swagger to read/update last API service definition
 
+# Legal Status
+- Micro Hucha Solidaria is a legal non profit entity in Spain that can collect and redistribute donation.  https://microhuchasolidaria.org/es/
+- Je Vais Aider is a legal non profit entity in France that can collect and redistribute donation. https://jevaisaider.org/fr
+
 # API Status
-Check. API is still beta version. Any Goopher can collaborate. Watch or Star this page and we´ll share GIT repository with you.
+API is still beta version. Any Goopher can collaborate. Watch or Star this page and we´ll share GIT repository with you.
 - `https://api.microhuchasolidaria.org/version` for Micro Hucha Solidaria
 - `https://api.jevaisaider.org/version` for Je Vais Aider
 
