@@ -27,7 +27,7 @@ Real time total donation endpoint made by all USERS
 - `https://api.jevaisaider.org/metrics` for Je Vais Aider
 
 # API technical aspects
-On Linux Ubuntu
+Build on Linux Ubuntu Xenial (16.04 LTS)
 - `golang`   https://github.com/golang
 - `golang gin-gonic` framework for API development  https://github.com/gin-gonic/gin
 - `Postgress` for database.
