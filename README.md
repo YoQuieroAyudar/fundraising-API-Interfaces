@@ -1,5 +1,5 @@
 # API
-YoQuieroAyudar/JeVaisAider/IWantToHelp API
+YoQuieroAyudar/JeVaisAider/IWantToHelp charity donation API
 
 
 We are a non-profit association that collects donations from 2 to 10 € of users of mobile app for all the organizations (associations and foundations) that participate in the program. The donations are entirely given to the organizations for which the membership is totally free.
