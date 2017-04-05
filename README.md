@@ -21,3 +21,15 @@ Check
 Total donation made by USER
 - `https://api.microhuchasolidaria.org/metrics` for Micro Hucha Solidaria
 - `https://api.jevaisaider.org/metrics` for Je Vais Aider
+
+# API technical aspects
+We use on Linux Ubuntu
+- `golang` 
+- `golang gin-gonic` for API development
+- `Postgress` for database
+- `GORM` for ORM
+- `Goose` for Database Migration Tool
+
+
+
+
