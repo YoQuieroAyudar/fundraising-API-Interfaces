@@ -1,0 +1,1117 @@
+# Example YAML to get you started quickly.
+# Be aware that YAML has indentation based scoping.
+# Code completion support is available so start typing for available options.
+swagger: '2.0'
+
+# This is your document metadata
+info:
+  version: "0.0.7"
+  title: "Yo Quiero Ayudar API"
+
+# GO TO http://editor.swagger.io/#/ and copy-paste this code in the editor
+# to get a better layout
+paths:
+  /signin:
+    post:
+      description: |
+        Gets an authentication token
+      parameters:
+        -
+          name: mail
+          in: query
+          description: Email adress
+          required: true
+          type: string
+        -
+          name: password
+          in: query
+          description: Password
+          required: true
+          type: string
+      responses:
+        200:
+          description: Signin OK
+          schema:
+            title: token
+            type: string
+        401:
+          description: Mail or password is not correct
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+
+  /signin/:provider:
+    post:
+      description: |
+        Social login with :provider. Signup if the user already exists. USER ONLY (donator)
+        ONLY facebook for the moment (/signin/facebook)
+      parameters:
+        -
+          name: token
+          in: query
+          description: Oauth token obtained from the provider
+          required: true
+          type: string
+      responses:
+        200:
+          description: Signin OK
+          schema:
+            title: token
+            type: string
+        400:
+          description: invalid token or provider
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+
+  /signup:
+    post:
+      description: |
+        Signup
+      parameters:
+
+        -
+          name: mail
+          in: query
+          description: Email adress
+          required: true
+          type: string
+        -
+          name: password
+          in: query
+          description: Password
+          required: true
+          type: string
+        -
+          name: first_name
+          in: query
+          description: First name of the user
+          required: true
+          type: string
+        -
+          name: last_name
+          in: query
+          description: Last name of the user
+          required: true
+          type: string
+        -
+          name: birthday
+          in: query
+          description: Birthday of the user. Only RFC3339 format accepted (for example, 2016-04-13T22:00:00.000Z)
+          required: true
+          type: string
+        -
+          name: gender
+          in: query
+          description: Gender of the user. M for Men, W for Women
+          required: false
+          type: string
+        -
+          name: nationality
+          in: query
+          description: Nationality of the user
+          required: true
+          type: string
+        -
+          name: country_of_residence
+          in: query
+          description: Country of residence of the user
+          required: true
+          type: string
+        -
+          name: status
+          in: query
+          description: ASSO, POS or USER (otherwise 401 error)
+          required: true
+          type: string
+        -
+          name: bank_account_iban
+          in: query
+          description: Bank account IBAN for ASSO
+          required: true
+          type: string
+        -
+          name: bank_account_bic
+          in: query
+          description: Bank account BIC/SWIFT for ASSO
+          required: true
+          type: string
+        -
+          name: cif
+          in: query
+          description: CIF
+          required: false
+          type: string
+      responses:
+        200:
+          description: Signup OK
+          schema:
+            title: message
+            type: string
+        401:
+          description: Wrong status, email not available or invalid bank account
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+
+  /signup_twitter_asso:
+    post:
+      description: |
+        Signup
+      parameters:
+
+        -
+          name: mail
+          in: query
+          description: Email adress
+          required: true
+          type: string
+        -
+          name: password
+          in: query
+          description: Password
+          required: true
+          type: string
+        -
+          name: token
+          in: query
+          description: Magic token (parameter of the magic link)
+          required: true
+          type: string
+        -
+          name: first_name
+          in: query
+          description: First name of the user
+          required: true
+          type: string
+        -
+          name: last_name
+          in: query
+          description: Last name of the user
+          required: true
+          type: string
+        -
+          name: birthday
+          in: query
+          description: Birthday of the user. Only RFC3339 format accepted (for example, 2016-04-13T22:00:00.000Z)
+          required: true
+          type: string
+        -
+          name: nationality
+          in: query
+          description: Nationality of the user
+          required: true
+          type: string
+        -
+          name: country_of_residence
+          in: query
+          description: Country of residence of the user
+          required: true
+          type: string
+        -
+          name: bank_account_iban
+          in: query
+          description: Bank account IBAN
+          required: true
+          type: string
+        -
+          name: bank_account_bic
+          in: query
+          description: Bank account BIC/SWIFT
+          required: true
+          type: string
+
+      responses:
+        200:
+          description: Signup OK
+          schema:
+            title: message
+            type: string
+        401:
+          description: Wrong status, email not available or invalid bank account
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+
+  /recover_password:
+    post:
+      description: |
+        Recovers the password from an email adress
+      parameters:
+
+        -
+          name: mail
+          in: query
+          description: Email adress
+          required: true
+          type: string
+      responses:
+        200:
+          description: Recover OK. Email sent.
+          schema:
+            title: message
+            type: string
+        400:
+          description: Incorrect email adress
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+
+  /change_password:
+    post:
+      description: |
+        Changes the pasword of the user which corresponds to the token post parameter.
+      parameters:
+
+        -
+          name: token
+          in: query
+          description: JWT token of the user
+          required: true
+          type: string
+        -
+          name: password
+          in: query
+          description: New password
+          required: true
+          type: string
+      responses:
+        200:
+          description: Password changed
+          schema:
+            title: message
+            type: string
+        400:
+          description: Incorrect token
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+
+  /pos/:id:
+    get:
+      description: |
+        Gets the establishment of the user if the user is not an admin.
+        Gets the establishment whose id is given in parameter if the user is an admin
+      parameters:
+        -
+          name: Authorization
+          in: header
+          description: Authorization header. "Bearer [TOKEN]"
+          required: false
+          type: string
+      responses:
+        200:
+          description: Entity returned successfully (object)
+          schema:
+            title: entity
+            type: string
+        400:
+          description: Wrong entity id
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+        401:
+          description: Authorization error
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+
+    put:
+        description: |
+          Updates the establishment whose id is given in parameter. All pos attributes can be set except created_at, updated_at, id. Just indicate the new value of an attribute as a body parameter
+        parameters:
+          -
+            name: Authorization
+            in: header
+            description: Authorization header. "Bearer [TOKEN]"
+            required: true
+            type: string
+        responses:
+          200:
+            description: Establishment updated successfully
+          401:
+            description: Authorization error or entity not found
+            schema:
+              title: errors
+              type: array
+              items:
+                title: error
+                type: string
+
+
+  /asso/:id:
+
+    put:
+      description: |
+        Updates the association whose id is given in parameter. All pos attributes can be set except created_at, updated_at, id. Just indicate the new value of an attribute as a body parameter
+      parameters:
+        -
+          name: Authorization
+          in: header
+          description: Authorization header. "Bearer [TOKEN]"
+          required: true
+          type: string
+      responses:
+        200:
+          description: Association updated successfully
+        401:
+          description: Authorization error or entity not found
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+    get:
+      description: |
+        Gets the association of the user if the user is not an admin.
+        Gets the association whose id is given in parameter if the user is an admin
+        This method is used to get the magic_link attribute from this Association. This magic_link a.k.a deep link is showed just to the Admin user in detail asso screen, who can copy it and send it to the asso or establishment to complete the registration. All the assos generated from twitter should have this attribute("magic_link").
+      parameters:
+        -
+          name: Authorization
+          in: header
+          description: Authorization header. "Bearer [TOKEN]"
+          required: true
+          type: string
+      responses:
+        200:
+          description: Entity returned successfully (object)
+          schema:
+            title: entity
+            type: string
+        400:
+          description: Wrong entity id
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+        401:
+          description: Authorization error
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+
+  /pos:
+    post:
+      description: |
+        Creates a new establishment. ADMIN ONLY. Required - name,geo_x,geo_y,is_foundation,address,active,user_id
+      parameters:
+        -
+          name: Authorization
+          in: header
+          description: Authorization header. "Bearer [TOKEN]"
+          required: true
+          type: string
+
+      responses:
+        200:
+          description: Establishment created successfully
+          schema:
+            title: id
+            type: integer
+        400:
+          description: Missing parameter
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+        401:
+          description: Authorization error - ADMIN status required
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+    get:
+      description: |
+        Gets the list of establishments of a user.
+      parameters:
+        -
+          name: Authorization
+          in: header
+          description: Authorization header. "Bearer [TOKEN]"
+          required: true
+          type: string
+
+      responses:
+        200:
+          description: Returns the list of the establishments of the user
+          schema:
+            title: list
+            type: array
+            items:
+              title: pos
+              type: string
+        401:
+          description: Authorization error
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+
+
+  /asso:
+    post:
+      description: |
+        Creates a new association. ADMIN ONLY. Required - name,geo_x,geo_y,address,active,user_id
+      parameters:
+        -
+          name: Authorization
+          in: header
+          description: Authorization header. "Bearer [TOKEN]"
+          required: true
+          type: string
+
+      responses:
+        200:
+          description: Association created successfully
+          schema:
+            title: id
+            type: integer
+        400:
+          description: Missing parameter
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+        401:
+          description: Authorization error - ADMIN status required
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+
+    get:
+      description: |
+        Gets the list of associations of a user.
+      parameters:
+        -
+          name: Authorization
+          in: header
+          description: Authorization header. "Bearer [TOKEN]"
+          required: true
+          type: string
+
+      responses:
+        200:
+          description: Returns the list of the associations of the user
+          schema:
+            title: list
+            type: array
+            items:
+              title: asso
+              type: string
+        401:
+          description: Authorization error
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+
+  /search/asso:
+    get:
+      description: |
+        Performs a association search.
+      parameters:
+        -
+          name: Authorization
+          in: header
+          description: Authorization header. "Bearer [TOKEN]"
+          required: true
+          type: string
+        -
+          name: pos_id
+          in: query
+          description: ID of the pos (the one you get after flashing the QR code)
+          required: true
+          type: integer
+        -
+          name: country
+          in: query
+          description: search by country code
+          required: false
+          type: integer
+        -
+          name: search
+          in: query
+          description: full text search
+          required: false
+          type: string
+
+      responses:
+        200:
+          description: Returns the result of the search, a list of associations
+          schema:
+            title: list
+            type: array
+            items:
+              title: asso
+              type: string
+        400:
+          description: Missing parameter
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+        401:
+          description: Authorization error
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+
+
+  /donation:
+    post:
+      description: |
+        Performs a donation. USER only.
+      parameters:
+        -
+          name: amount
+          in: query
+          description: Amount of the transaction. Must be 200,400,600,800 or 1000
+          required: true
+          type: integer
+        -
+          name: association_id
+          in: query
+          description: Association which receives the money
+          required: true
+          type: integer
+        -
+          name: Authorization
+          in: header
+          description: Authorization header. "Bearer [TOKEN]"
+          required: true
+          type: string
+
+      responses:
+        200:
+          description: Transaction performed successfully
+          schema:
+            title: message
+            type: string
+        400:
+          description: Missing parameter or association not found
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+        401:
+          description: Authorization error
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+
+  /register_card:
+    post:
+      description: |
+        Initialize the card registration process. USER & POS only.
+        To continue the process, see steps 5-6 https://docs.mangopay.com/api-references/payins/payindirectcard/
+
+      parameters:
+        -
+          name: Authorization
+          in: header
+          description: Authorization header. "Bearer [TOKEN]"
+          required: true
+          type: string
+
+      responses:
+        200:
+          description: Charging performed successfully
+          schema:
+            type: object
+            properties:
+              data:
+                type: string
+                description: parameter of the registration card form (url encoded)
+              accessKeyRef:
+                type: string
+                description: parameter of the registration card form (url encoded)
+              cardRegistrationURL:
+                type: string
+                description: action URL of the registration card form
+              returnURL:
+                type: string
+                description: ???
+
+        400:
+          description: Missing parameter
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+        401:
+          description: Authorization error
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+
+  /recharge_account:
+    post:
+      description: |
+        Recharges the user account. A card must be registered before (POST /register_card). USER only.
+      parameters:
+        -
+          name: amount
+          in: query
+          description: Amount of the transaction
+          required: true
+          type: integer
+        -
+          name: token
+          in: query
+          description: Token of the credit card (you can get it by using POST /register_card)
+          required: true
+          type: string
+        -
+          name: Authorization
+          in: header
+          description: Authorization header. "Bearer [TOKEN]"
+          required: true
+          type: string
+
+      responses:
+        200:
+          description: Successfull transaction
+          schema:
+            title: message
+            type: string
+        400:
+          description: Missing parameter
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+        401:
+          description: Authorization error
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+
+
+  /pay_subscription:
+    post:
+      description: |
+        Extends the subscription of the establishment. A card must be registered before (POST /register_card) POS only.
+      parameters:
+        -
+          name: months
+          in: query
+          description: Duration of the subscription (1, 3 or 6 months)
+          required: true
+          type: integer
+        -
+          name: token
+          in: query
+          description: Token of the credit card (you can get it by using POST /register_card)
+          required: true
+          type: string
+        -
+          name: Authorization
+          in: header
+          description: Authorization header. "Bearer [TOKEN]"
+          required: true
+          type: string
+
+      responses:
+        200:
+          description: Successfull transaction
+          schema:
+            title: message
+            type: string
+        400:
+          description: Missing parameter
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+        401:
+          description: Authorization error
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+
+  /transactions:
+    get:
+      description: |
+        Shows all transactions between dates
+      parameters:
+        -
+          name: after_date
+          in: query
+          description: Search after this date
+          required: false
+          type: string
+        -
+          name: before_date
+          in: query
+          description: Search before this date
+          required: false
+          type: string
+        -
+          name: Authorization
+          in: header
+          description: Authorization header. "Bearer [TOKEN]"
+          required: true
+          type: string
+      responses:
+        200:
+          description: Transaction list returned correctly
+          schema:
+            title: list
+            type: array
+            items:
+              title: transactions
+              type: string
+        400:
+          description: Missing parameter
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+        401:
+          description: Authorization error
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+  /wallet_balance:
+    get:
+      description: |
+        Shows balance from your account
+      responses:
+        200:
+          description: Wallet balance
+          schema:
+            type: object
+            properties:
+              balance:
+                type: object
+                properties:
+                  Currency:
+                    type: string
+                  Amount:
+                    type: integer
+        401:
+          description: Authorization error
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+  /media:
+    post:
+      description: |
+        Endpoint to upload photos/videos
+      responses:
+        200:
+          description: Url for the uploaded media
+          schema:
+            type: object
+            properties:
+              url:
+                type: string
+
+  /twitter_sync:
+    post:
+      description: |
+        Triggers the synchronization with Twitter (only for ADMIN)
+      parameters:
+        -
+          name: Authorization
+          in: header
+          description: Authorization header. "Bearer [ADMIN_TOKEN]"
+          required: false
+          type: string
+      responses:
+        200:
+          description: Synchronization with Twitter performed successfully
+          schema:
+            title: entity
+            type: string
+        401:
+          description: Authorization error
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+
+  /metrics:
+    get:
+      description: |
+        Shows some metrics about donations
+      parameters:
+        -
+          name: Authorization
+          in: header
+          description: Authorization header. "Bearer [ADMIN_TOKEN]"
+          required: false
+          type: string
+      responses:
+        200:
+          description: Total of all the donations
+          schema:
+            title: total_donations
+            type: string
+        401:
+          description: Authorization error
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+
+  /fees:
+    post:
+      description: |
+        Returns VAT (depending on the country), VAT rate, mangopay fees and the total amount due.
+      parameters:
+        -
+          name: country
+          in: query
+          description: Country of the user who pays
+          required: false
+          type: string
+        -
+          name: amount
+          in: query
+          description: Amount of the PayIn, in cents (2 euros = 200)
+          required: false
+          type: string
+
+      responses:
+        200:
+          description: Everything ok
+          schema:
+            $ref: '#/definitions/FeesModel'
+        400:
+          description: Wrong country
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+
+  /donations/by-year:
+    get:
+      description: |
+        Gets the donations of the user by year.
+      parameters:
+        -
+          name: Authorization
+          in: header
+          description: Authorization header. "Bearer [TOKEN]"
+          required: true
+          type: string
+      responses:
+        200:
+          description: List of donations by asso and year
+          schema:
+            title: donations
+            type: array
+            items:
+              title: donations
+        401:
+          description: Authorization error
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+  /asso/request-certificate:
+    post:
+      description: |
+        Gets the donations of the user by year.
+      parameters:
+        -
+          name: Authorization
+          in: header
+          description: Authorization header. "Bearer [TOKEN]"
+          required: true
+          type: string
+        -
+          name: dni
+          in: query
+          description: Users DNI
+          required: true
+          type: string
+        -
+          name: association_id
+          in: query
+          description: Association's ID
+          required: true
+          type: number
+        -
+          name: tax_address
+          in: query
+          description: Person tax address
+          required: true
+          type: string
+      responses:
+        200:
+          description: Request went ok
+          schema:
+            title: donations
+            type: array
+            items:
+              title: donations
+        401:
+          description: Authorization error
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+
+  /pos/:id/invoices:
+    get:
+      description: |
+        Gets pos invoices (subscriptions)
+      parameters:
+        -
+          name: Authorization
+          in: header
+          description: Authorization header. "Bearer [POS_TOKEN]"
+          required: true
+          type: string
+      responses:
+        200:
+          description: Array of invoices
+        401:
+          description: Authorization error
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+
+definitions:
+  FeesModel:
+    type: object
+    required:
+    - fees
+    - vat
+    - vat_rate
+    - total
+    properties:
+      fees:
+        type: integer
+        description: Mangopay fees
+      vat:
+        type: integer
+        description: VAT
+      vat_rate:
+        type: integer
+        description: VAT Rate (ie:20 for FR)
+      total:
+        type: integer
+        description: Total amount due (input amount + vat + fees)
+
+  ErrorModel:
+    type: object
+    required:
+    - error
+    properties:
+      error:
+        type: string
+        description: Technical error message
+      message:
+        type: string
+        description: Error message
+      key:
+        type: string
+        description: Translation key
+
+  ErrorsModel:
+    type: object
+    required:
+    - error
+    properties:
+      error:
+        type: string
+        description: Technical error message
+      message:
+        type: string
+        description: Error message
+      key:
+        type: string
+        description: Translation key
