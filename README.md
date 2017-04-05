@@ -23,12 +23,16 @@ Total donation made by USER
 - `https://api.jevaisaider.org/metrics` for Je Vais Aider
 
 # API technical aspects
-We use on Linux Ubuntu
+On Linux Ubuntu
 - `golang` 
 - `golang gin-gonic` for API development
 - `Postgress` for database
 - `GORM` for ORM
 - `Goose` for Database Migration Tool
+
+# Financial API service
+We use Mangopay to manage e-wallet for all entities
+- `Mangopay` https://docs.mangopay.com/
 
 
 
