@@ -13,8 +13,9 @@ All donations are API based defined in api.yml. We are building a service to eas
 Copy/paste   api.yml in swagger to read/update last API service definition
 
 # Legal Status
-- Micro Hucha Solidaria is a legal non profit entity in Spain that can collect and redistribute donation.  https://microhuchasolidaria.org/es/
-- Je Vais Aider is a legal non profit entity in France that can collect and redistribute donation. https://jevaisaider.org/fr
+- Micro Hucha Solidaria is a legal non profit entity in Spain that can collect and redistribute donations.  https://microhuchasolidaria.org/en/api-3/
+- Je Vais Aider is a legal non profit entity in France that can collect and redistribute donations. https://jevaisaider.org/fr/api-2/
+- More countries will come.
 
 # Countries
 - Micro Hucha Solidaria collect and redistribute donations in Spain.
@@ -23,7 +24,7 @@ Copy/paste   api.yml in swagger to read/update last API service definition
 
 # Project management
 - `GIT` for Project management.
-Any Golang gopher programmer can participate. Watch, Star this page or contact-us,  and we´ll contact you.
+Any Golang gopher programmer can participate for backend, any Angular/React for frontend. Watch, Star this page or contact-us,  and we´ll contact you.
 
 # API Status 0.15
 API is still beta version. 
