@@ -6,9 +6,9 @@ In England IWantToHelp, in France, association Je Vais Aider, in Spain, asociaci
 All donations are API based defined in api.yml. We are building a service to easily make donations to world charities.
 
 - `Swagger` is for API service definition http://editor.swagger.io/
-- `POS` stands for Point Of Sale. A legal entity that promotes and support us.
+- `POS` stands for Point Of Sale. A legal entity that promotes and support us. Country specific VAT tax applies to this entity.
 - `ASSO` stands for Association. A entity that receive donations.
-- `USER` stands for natural user who make donations.
+- `USER` stands for natural user who make donations. No VAT tax applies for this entity.
 
 Copy/paste   api.yml in swagger to read/update last API service definition
 
