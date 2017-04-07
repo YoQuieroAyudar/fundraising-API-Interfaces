@@ -20,7 +20,16 @@ Copy/paste   api.yml in swagger to read/update last API service definition
 # Countries
 - Micro Hucha Solidaria collect and redistribute donations in Spain.
 - Je Vais Aider collect and redistribute donations in France, Belgium, Swizerland,Morroco, Tunez.
-- More countries will come.
+- More countries will come. Germany ?
+
+# API technology stack
+Build on Linux Ubuntu Xenial (16.04 LTS)
+- `golang`   https://github.com/golang
+- `golang gin-gonic` framework for API development  https://github.com/gin-gonic/gin
+- `Postgress` for database.
+- `GORM` ORM library for Golang  https://github.com/jinzhu/gorm
+- `Goose` for Database Migration Tool  https://bitbucket.org/liamstask/goose
+- `Postman` for API testing  https://www.getpostman.com/
 
 # Project management
 - `GIT` for Project management.
@@ -36,22 +45,10 @@ Real time total donation endpoint made by all USERS
 - `https://api.microhuchasolidaria.org/metrics` for Micro Hucha Solidaria.
 - `https://api.jevaisaider.org/metrics` for Je Vais Aider.
 
-# API technical aspects
-Build on Linux Ubuntu Xenial (16.04 LTS)
-- `golang`   https://github.com/golang
-- `golang gin-gonic` framework for API development  https://github.com/gin-gonic/gin
-- `Postgress` for database.
-- `GORM` ORM library for Golang  https://github.com/jinzhu/gorm
-- `Goose` for Database Migration Tool  https://bitbucket.org/liamstask/goose
-
 # Financial API service
 We use Mangopay to manage e-wallet for all entities: POS. ASSO, USERS
 - `Mangopay` https://docs.mangopay.com/
-- `Mangopay for Golang` Go implementation of the MangoPay HTTP REST api version 2. https://github.com/javiermanzano/mangopay2-go-sdk
-
-# API TESTING
-We use a Postman collection for service testing.
-
+- `Mangopay for Golang` Go implementation of the MangoPay HTTP REST api version 2.
 
 
 
