@@ -18,9 +18,9 @@ Copy/paste   api.yml in swagger to read/update last API service definition
 - More countries will come.
 
 # Countries
-- Micro Hucha Solidaria collect and redistribute donations in Spain.
+- Micro Hucha Solidaria is the pilot project, collect and redistribute donations in Spain.
 - Je Vais Aider collect and redistribute donations in France, Belgium, Swizerland,Morroco, Tunez.
-- Based on the same API technology stack, more countries wil be added. Germany & german speaking countries https://twitter.com/IchWillHelfen, Italy https://twitter.com/IoVoglioAiutare, Portugal https://twitter.com/EQueroAjudar, UK https://twitter.com/IWantToHelpUK ...
+- Based on the same API technology stack, more countries wil be added. German speaking countries https://twitter.com/IchWillHelfen, Italy https://twitter.com/IoVoglioAiutare, Portuguese speaking countries https://twitter.com/EQueroAjudar, UK https://twitter.com/IWantToHelpUK ...
 - For each new country, we need to translate backend messages, adapt VAT rates, adapt wallet currencies...
 
 # API technology stack
