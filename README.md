@@ -20,7 +20,8 @@ Copy/paste   api.yml in swagger to read/update last API service definition
 # Countries
 - Micro Hucha Solidaria collect and redistribute donations in Spain.
 - Je Vais Aider collect and redistribute donations in France, Belgium, Swizerland,Morroco, Tunez.
-- More countries will come. Germany ?
+- Based on the same API technology stack, more countries wil be added. Germany & german speaking countries https://twitter.com/IchWillHelfen, Italy https://twitter.com/IoVoglioAiutare, Portugal https://twitter.com/EQueroAjudar, UK https://twitter.com/IWantToHelpUK ...
+- For each new country, we need to translate backend messages, adapt VAT rates, adapt wallet currencies...
 
 # API technology stack
 Build on Linux Ubuntu Xenial (16.04 LTS)
@@ -32,8 +33,8 @@ Build on Linux Ubuntu Xenial (16.04 LTS)
 - `Postman` for API testing  https://www.getpostman.com/
 
 # Project management
-- `GIT` for Project management.
-Any Golang gopher programmer can participate for backend, any Angular/React for frontend. Watch, Star this page or contact-us,  and we´ll contact you.
+- `GIT` API backend is on a private GIT.
+Any Golang gopher programmer can participate for backend, any Angular/React for frontend. Watch, Star this page or contact-us: info@microhuchasolidaria.org ,  and we´ll contact you.
 
 # API Status 0.15
 API is still beta version. 
