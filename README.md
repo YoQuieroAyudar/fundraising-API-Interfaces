@@ -1,5 +1,5 @@
 # API
-YoQuieroAyudar/JeVaisAider/IWantToHelp is a charity donation API
+YoQuieroAyudar/JeVaisAider/IWantToHelp is a API-Driven, Charity Donation Service
 
 We are a non-profit association that collects donations from 2 to 10 € of users of mobile app for all the organizations (associations and foundations) that participate in the program. The donations are entirely given to the organizations for which the membership is totally free.
 In England IWantToHelp, in France, association Je Vais Aider, in Spain, asociación Micro Hucha Solidaria. More countries will come.
