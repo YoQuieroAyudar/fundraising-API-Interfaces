@@ -12,18 +12,19 @@ All donations are API based defined in api.yml. We are building a service to eas
 
 Copy/paste   api.yml in swagger to read/update last API service definition
 
-# Legal Status
+## Legal Status
+- A legal non profit entity is needed to collect and redistribute donations to charities.
 - Micro Hucha Solidaria is a legal non profit entity in Spain that can collect and redistribute donations.  https://microhuchasolidaria.org/en/api-3/
 - Je Vais Aider is a legal non profit entity in France that can collect and redistribute donations. https://jevaisaider.org/fr/api-2/
-- More countries will come.
+- Ask us how to create a new legal non profit entity.
 
-# Countries
+## Countries
 - Micro Hucha Solidaria is the pilot project, collect and redistribute donations in Spain.
 - Je Vais Aider collect and redistribute donations in France, Belgium, Swizerland,Morroco, Tunez.
 - Based on the same API technology stack, more countries wil be added. German speaking countries https://twitter.com/IchWillHelfen, Italy https://twitter.com/IoVoglioAiutare, Portuguese speaking countries https://twitter.com/EQueroAjudar, UK https://twitter.com/IWantToHelpUK ...
 - For each new country, we need to add country charities, translate backend messages, adapt VAT rates, adapt wallet currencies...
 
-# API technology stack
+## API technology stack
 Build on Linux Ubuntu Xenial (16.04 LTS)
 - `golang`   https://github.com/golang
 - `golang gin-gonic` framework for API development  https://github.com/gin-gonic/gin
@@ -32,24 +33,27 @@ Build on Linux Ubuntu Xenial (16.04 LTS)
 - `Goose` for Database Migration Tool  https://bitbucket.org/liamstask/goose
 - `Postman` for API testing  https://www.getpostman.com/
 
-# Project management
+## Project management
 - `GIT` API backend is on a private GIT.
 Any Golang gopher programmer can participate for backend, any Angular 2/React for frontend. Watch, Star this page or contact-us: info@microhuchasolidaria.org ,  and we´ll contact you.
 
-# API Status 0.15
+## API Status 0.15
 API is still beta version. 
 - `https://api.microhuchasolidaria.org/version` for Micro Hucha Solidaria.
 - `https://api.jevaisaider.org/version` for Je Vais Aider.
 
-# API total donation /metrics
+## API total donation /metrics
 Real time total donation endpoint made by all USERS
 - `https://api.microhuchasolidaria.org/metrics` for Micro Hucha Solidaria.
 - `https://api.jevaisaider.org/metrics` for Je Vais Aider.
 
-# Financial API service
+## Financial API service
 We use Mangopay to manage e-wallet for all entities: POS. ASSO, USERS
 - `Mangopay` https://docs.mangopay.com/
 - `Mangopay for Golang` Go implementation of the MangoPay HTTP REST api version 2.
+
+## Contributions
+Feel free to open an issue or create a PR.
 
 
 
