@@ -31,9 +31,9 @@ Copy/paste   api.yml in swagger to read/update last API service definition
 
 /wallet_balance  Shows balance from your account.
 
-/donations/by-year Get USER donation by year for charity fiscal deduction certificate.
+/donations/by-year Get USER donation by year sent to ASSO to receive charity tax benefit certificate. Depends on country specific tax benefit laws.
 
-/asso/request-certificate  Request a charity fiscal deduction certificate for ASSO.
+/asso/request-certificate  Request to ASSO a tax benefit certificate.
 
 ## ASSO API endpoints
 /signup_twitter_asso  To synchronize a charity twitter profile: name, logo and description.
@@ -105,5 +105,6 @@ We use Mangopay to manage e-wallet for all entities: POS. ASSO, USERS
 ## Contributions
 Feel free to open an issue or create a PR.
 
-
+## Support- us
+Feel free to suport this charity donation project. 
 
