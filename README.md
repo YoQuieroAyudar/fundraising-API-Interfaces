@@ -13,7 +13,7 @@ All donations are API based defined in api.yml. We are building a service to eas
 Copy/paste   api.yml in swagger to read/update last API service definition
 
 ## USER API endpoints
-/signin  for a new user. A confirmation email will be sent to validate user.
+/signin     New user. A confirmation email will be sent to validate user.
 
 /signin/:provider Signin a new user with Facebook.
 
@@ -38,7 +38,7 @@ Copy/paste   api.yml in swagger to read/update last API service definition
 ## ASSO API endpoints
 /signup_twitter_asso  To synchronize a charity twitter profile: name, logo and description.
 
-/asso  pUT. Create an ASSO.
+/asso       Put. Create an ASSO.
 
 /asso/:id   Put. Update ASSO information.
 
