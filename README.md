@@ -66,7 +66,7 @@ Copy/paste   api.yml in swagger to read/update last API service definition
 - A legal non profit entity is needed to collect and redistribute donations to charities.
 - Micro Hucha Solidaria is a legal non profit entity in Spain that can collect and redistribute donations.  https://microhuchasolidaria.org/en/api-3/
 - Je Vais Aider is a legal non profit entity in France that can collect and redistribute donations. https://jevaisaider.org/fr/api-2/
-- Ask us how to create a new legal non profit entity.
+- Ask us how to create a new legal non profit entity in your country: info@jevaisaider.org
 
 ## Countries
 - Micro Hucha Solidaria is the pilot project, collect and redistribute donations in Spain.
