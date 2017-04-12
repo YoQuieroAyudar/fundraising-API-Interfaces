@@ -6,11 +6,61 @@ In England IWantToHelp, in France, association Je Vais Aider, in Spain, asociaci
 All donations are API based defined in api.yml. We are building a service to easily make donations to world charities.
 
 - `Swagger` is for API service definition http://editor.swagger.io/
-- `POS` stands for Point Of Sale. A legal entity that promotes and support us. Country specific VAT tax applies to this entity.
-- `ASSO` stands for Association. A entity that receive donations.
 - `USER` stands for natural user who make donations. No VAT tax applies for this entity.
+- `ASSO` stands for Association. A solidarious entity (Charity) that receive user donations.
+- `POS` stands for Point Of Sale. A legal entity that promotes and support us. Country specific VAT tax applies to this entity.
 
 Copy/paste   api.yml in swagger to read/update last API service definition
+
+## USER API endpoints
+/signin  for a new user. A confirmation email will be sent to validate user.
+
+/signin/:provider Signin a new user with Facebook.
+
+/signup To login.
+
+/recover_password  Recovers the password from an email adress.
+
+/change_password
+
+/donation  Donation form USER to ASSO. From 2 to 10 euros.
+
+/register_card  Register a USER credit card
+
+/recharge_account  Recharge USER account (e-Wallet).
+
+/wallet_balance  Shows balance from your account.
+
+/donations/by-year Get USER donation by year for charity fiscal deduction certificate.
+
+/asso/request-certificate  Request a charity fiscal deduction certificate for ASSO.
+
+## ASSO API endpoints
+/signup_twitter_asso  To synchronize a charity twitter profile: name, logo and description.
+
+/asso  pUT. Create an ASSO.
+
+/asso/:id   Put. Update ASSO information.
+
+/search/asso  Get. Search an ASSO.
+
+/media  Upload twitter profile ASSO logo.
+
+## POS API endpoints
+/pos   Put. Create a POS. 
+
+/pos/:id  Get a POS. 
+
+/register_card  Register a credit card.
+
+/pay_subscription  Pay POS monthly subcription. 10 euros + VAT.
+
+/fees  Returns VAT (depending on the country), VAT rate.
+
+/pos/:id/invoices   Get invoices for POS.
+
+## General use endpoints
+/metrics Shows some metrics about donations.
 
 ## Legal Status
 - A legal non profit entity is needed to collect and redistribute donations to charities.
