@@ -66,16 +66,16 @@ Copy/paste   api.yml in swagger to read/update last API service definition
 - A legal non profit entity is needed to collect and redistribute donations to charities.
 - Micro Hucha Solidaria is a legal non profit entity in Spain that can collect and redistribute donations.  https://microhuchasolidaria.org/en/api-3/
 - Je Vais Aider is a legal non profit entity in France that can collect and redistribute donations. https://jevaisaider.org/fr/api-2/
-- Ask us how to create a new legal non profit entity in your country: info@jevaisaider.org
+- Ask us how to create a new legal non profit entity in your country: info@microhuchasolidaria.org
 
 ## Countries
 - Micro Hucha Solidaria is the pilot project, collect and redistribute donations in Spain.
 - Je Vais Aider collect and redistribute donations in France, Belgium, Swizerland,Morroco, Tunez.
-- Based on the same API technology stack, more countries wil be added. German speaking countries https://twitter.com/IchWillHelfen, Italy https://twitter.com/IoVoglioAiutare, Portuguese speaking countries https://twitter.com/EQueroAjudar, UK https://twitter.com/IWantToHelpUK ...
-- For each new country, we need to add country charities, translate backend messages, adapt VAT rates, adapt wallet currencies...
+- Based on the same API technology stack, more countries wil be added. Spanish speaking countries https://twitter.com/YQuieroAyudar, French  https://twitter.com/JeVaisAider, Arab https://twitter.com/Oridoanose3ed, German https://twitter.com/IchWillHelfen, Italian https://twitter.com/IoVoglioAiutare, Portuguese https://twitter.com/EQueroAjudar, English https://twitter.com/IWantToHelpUK,  ...
+- For each new country, we need to contact and add country charities, translate backend messages, adapt VAT rates, adapt wallet currencies...
 
 ## API technology stack
-Build on Linux Ubuntu Xenial (16.04 LTS)
+The api service is build on Linux Ubuntu Xenial (16.04 LTS)
 - `golang`   https://github.com/golang
 - `golang gin-gonic` framework for API development  https://github.com/gin-gonic/gin
 - `Postgress` for database.
@@ -106,5 +106,5 @@ We use Mangopay to manage e-wallet for all entities: POS. ASSO, USERS
 Feel free to open an issue or create a PR.
 
 ## Support- us
-Feel free to suport this charity donation project. 
+Feel free to support this charity donation project. 
 
