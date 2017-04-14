@@ -1,7 +1,7 @@
 # API
 YoQuieroAyudar/JeVaisAider/IWantToHelp is a API-Driven, Charity Donation Service
 
-API is a working prototype.
+API is a working prototype. 80% of code is ready. We are looking for Golang programmer to finish it.
 
 We are a non-profit association that collects donations from 2 to 10 € of users for all the solidarious entity (associations and foundations) that participate in the program. The donations are entirely given to the organizations for which the membership is totally free.
 In England IWantToHelp, in France, association Je Vais Aider, in Spain, asociación Micro Hucha Solidaria. More countries will come.
