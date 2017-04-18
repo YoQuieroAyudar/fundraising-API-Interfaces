@@ -1,5 +1,5 @@
 # API
-YoQuieroAyudar/JeVaisAider/IWantToHelp is a API-Driven, Charity Donation Service
+YoQuieroAyudar/JeVaisAider/IWantToHelp is a API-Driven, zero comission Charity Donation Service
 
 API is a working prototype. 80% of code is ready. We are looking for a Golang programmer to finalize it. Contact-us: info@microhuchasolidaria.org 
 
@@ -13,6 +13,10 @@ All donations are API based defined in api.yml. We are building a service to eas
 - `POS` stands for Point Of Sale. A legal entity that promotes and support us. Country specific VAT tax applies to this entity.
 
 Copy/paste   api.yml in swagger to read/update last API service definition
+
+## API endpoints processes
+Check
+http://slides.com/yoquieroayudar-es/charity-api
 
 ## USER API endpoints
 /signin     New user. A confirmation email will be sent to validate user.
