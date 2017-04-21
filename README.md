@@ -14,24 +14,28 @@ All donations are API based defined in api.yml. We are building a service to eas
 
 Copy/paste   api.yml in swagger to read/update last API service definition
 
+## Developer community 
+Check Gitter
+https://gitter.im/charity-donation-API/Lobby
+
 ## API endpoints processes
-Check
+Check API development status
 http://slides.com/yoquieroayudar-es/charity-api
 
 ## USER API endpoints
-/signin     New user. A confirmation email will be sent to validate user.
+/signup     New user. A confirmation email will be sent to validate user.
 
 /signin/:provider Signin a new user with Facebook.
 
-/signup To login.
+/signin To login.
 
 /recover_password  Recovers the password from an email adress.
 
 /change_password
 
-/donation  Donation form USER to ASSO. From 2 to 10 euros.
+/donation  #zero comission donation from USER to ASSO (Charity). Currently, me manage Euros, from 2 to 10 euros.
 
-/register_card  Register a USER credit card
+/register_card  Register a USER credit card.
 
 /recharge_account  Recharge USER account (e-Wallet).
 
