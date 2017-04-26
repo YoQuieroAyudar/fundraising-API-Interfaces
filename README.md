@@ -16,7 +16,7 @@ Copy/paste   api.yml in swagger to read/update last API service definition
 
 ## API endpoints processes
 Check API development status
-http://slides.com/yoquieroayudar-es/charity-api
+https://slides.com/yoquieroayudar-es/
 
 ## USER API endpoints
 /signup     New user. A confirmation email will be sent to validate user.
