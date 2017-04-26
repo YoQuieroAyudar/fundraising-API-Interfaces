@@ -14,10 +14,6 @@ All donations are API based defined in api.yml. We are building a service to eas
 
 Copy/paste   api.yml in swagger to read/update last API service definition
 
-## Developer community 
-Check Gitter
-https://gitter.im/charity-donation-API/Lobby
-
 ## API endpoints processes
 Check API development status
 http://slides.com/yoquieroayudar-es/charity-api
