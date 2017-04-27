@@ -1,5 +1,5 @@
-# API
-#fintech #nonprofit charity promoting zero commission donations and volunteering for charities.
+# API Interfaces
+#fundraising #nonprofit charity promoting zero commission donations and volunteering for charities.
 
 API is a working prototype. 80% of code is ready. We are looking for a Golang programmer to finalize it. Contact-us: info@microhuchasolidaria.org 
 
