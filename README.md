@@ -1,7 +1,7 @@
 # API Interfaces
-#fundraising #nonprofit charity promoting zero commission donations and volunteering for charities.
+#fundraising golang #nonprofit charity promoting zero commission donations and volunteering for charities.
 
-API is a working prototype. 80% of code is ready. We are looking for a Golang programmer to finalize it. Contact-us: info@microhuchasolidaria.org 
+API is a working prototype. 84% of code is ready. We are looking for a Golang programmer to finalize it. Contact-us: info@microhuchasolidaria.org 
 
 We are a non-profit association that collects donations from 2 to 10 € of users for all the solidarious entity (associations and foundations) that participate in the program. The donations are entirely given to the organizations for which the membership is totally free.
 In England IWantToHelp, in France, association Je Vais Aider, in Spain, asociación Micro Hucha Solidaria. More countries will come.
@@ -9,7 +9,7 @@ All donations are API based defined in api.yml. We are building a service to eas
 
 - `Swagger` is for API service definition http://editor.swagger.io/
 - `USER` stands for natural user who make donations. No VAT tax applies for this entity.
-- `ASSO` stands for Association. A solidarious entity (Charity) that receive user donations.
+- `ASSO` stands for Association. A solidarious legal entity (Charity) that receive user donations.
 - `POS` stands for Point Of Sale. A legal entity that promotes and support us. Country specific VAT tax applies to this entity.
 
 Copy/paste   api.yml in swagger to read/update last API service definition
@@ -59,7 +59,7 @@ https://slides.com/yoquieroayudar-es/
 
 /register_card  Register a credit card.
 
-/pay_subscription  Pay POS monthly subcription. 10 euros + VAT.
+/pay_subscription  Pay POS monthly subcription. 10 euros + country specific VAT.
 
 /fees  Returns VAT (depending on the country), VAT rate.
 
@@ -90,18 +90,20 @@ The api service is build on Linux Ubuntu Xenial (16.04 LTS)
 - `Postman` for API testing  https://www.getpostman.com/
 
 ## Project management
-- `GIT` API backend is on a private GIT.
-Any Golang gopher programmer can participate for backend, any Angular 2/React for frontend. Watch, Star this page or contact-us: info@microhuchasolidaria.org ,  and we´ll contact you.
+- `GIT` API backend is on a private GIT for security reasons. We manage payments.
+Any Golang gopher programmer can participate for backend, VueJS, Angular for frontend. Watch, Star this page or contact-us: info@microhuchasolidaria.org ,  and we´ll contact you.
 
-## API Status 0.15
+## API Status
 API is still beta version. 
 - `https://api.microhuchasolidaria.org/version` for Micro Hucha Solidaria.
 - `https://api.jevaisaider.org/version` for Je Vais Aider.
+- `http://api.iwanttohelp.org.uk/version` for I Want to Help.
 
 ## API total donation /metrics
 Real time total donation endpoint made by all USERS
 - `https://api.microhuchasolidaria.org/metrics` for Micro Hucha Solidaria.
 - `https://api.jevaisaider.org/metrics` for Je Vais Aider.
+- `http://api.iwanttohelp.org.uk/metrics` for  Want to Help.
 
 ## Financial API service
 We use Mangopay to manage e-wallet for all entities: POS. ASSO, USERS
@@ -112,5 +114,5 @@ We use Mangopay to manage e-wallet for all entities: POS. ASSO, USERS
 Feel free to open an issue or create a PR.
 
 ## Support- us
-Feel free to support this charity donation project. 
+Feel free to support this charity donation project. ```https://slides.com/yoquieroayudar-es/``` for more information.
 
