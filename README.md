@@ -52,6 +52,8 @@ https://slides.com/yoquieroayudar-es/
 
 /media  Upload twitter profile ASSO logo.
 
+/twitter_sync  Gets all ASSO Charties 
+
 ## POS API endpoints
 /pos   Put. Create a POS. 
 
