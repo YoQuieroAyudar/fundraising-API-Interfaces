@@ -1,7 +1,7 @@
 # API Interfaces
 #fundraising golang #nonprofit charity promoting zero commission donations and volunteering for charities.
 
-API is a working prototype. 84% of code is ready. We are looking for a Golang programmer to finalize it. Contact-us: info@microhuchasolidaria.org 
+API is a working prototype. 90% of code is ready. We are looking for a Golang programmer to finalize it. Contact-us: info@microhuchasolidaria.org 
 
 We are a non-profit association that collects donations from 2 to 10 € of users for all the solidarious entity (associations and foundations) that participate in the program. The donations are entirely given to the organizations for which the membership is totally free.
 In England IWantToHelp, in France, association Je Vais Aider, in Spain, asociación Micro Hucha Solidaria. More countries will come.
@@ -16,7 +16,7 @@ Copy/paste   api.yml in swagger to read/update last API service definition
 
 ## API endpoints processes
 Check API development status
-https://slides.com/yoquieroayudar-es/
+https://slides.com/yoquieroayudar-es/backend-charity-api
 
 ## USER API endpoints
 /signup     New user. A confirmation email will be sent to validate user.
@@ -52,7 +52,7 @@ https://slides.com/yoquieroayudar-es/
 
 /media  Upload twitter profile ASSO logo.
 
-/twitter_sync  Gets all ASSO Charties 
+/twitter_sync  Gets all charities from twitter list.
 
 ## POS API endpoints
 /pos   Put. Create a POS. 
