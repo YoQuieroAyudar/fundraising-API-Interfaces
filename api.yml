@@ -749,7 +749,42 @@ paths:
             items:
               title: error
               type: string
+        301:
+          description: 3DS Validation Redirect
+          headers:
+            Location:
+              type: "string"
 
+  /complete_recharge/:id:
+    get:
+      description: |
+        Recharge account completion step after a successful 3DS payment validation.
+
+        The clients MUST never call this endpoint directly, but instead use the 3DS
+        Validation Redirect URL from Mangopay. Once that page returns succesfully it
+        will redirect to this page with the appropriate transaction id.
+      parameters:
+        -
+          name: id
+          in: query
+          description: |
+            Succesfully validated 3DS PayIn transaction id of a Recharge Account.
+          required: true
+          type: string
+      responses:
+        200:
+          description: Successfull transaction
+          schema:
+            title: message
+            type: string
+        400:
+          description: Missing or wrong parameter
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
 
   /pay_subscription:
     post:
@@ -791,6 +826,42 @@ paths:
               type: string
         401:
           description: Authorization error
+          schema:
+            title: errors
+            type: array
+            items:
+              title: error
+              type: string
+        301:
+          description: 3DS Validation Redirect
+          headers:
+            Location:
+              type: "string"
+
+  /complete_subscription/:id:
+    get:
+      description: |
+        Subscription completion step after a successful 3DS payment validation.
+
+        The clients MUST never call this endpoint directly, but instead use the 3DS
+        Validation Redirect URL from Mangopay. Once that page returns succesfully it
+        will redirect to this endpoint with the appropriate transaction id.
+      parameters:
+        -
+          name: id
+          in: query
+          description: |
+            Succesfully validated 3DS PayIn transaction id of a Subcription.
+          required: true
+          type: string
+      responses:
+        200:
+          description: Successfull transaction
+          schema:
+            title: message
+            type: string
+        400:
+          description: Missing or wrong parameter
           schema:
             title: errors
             type: array
